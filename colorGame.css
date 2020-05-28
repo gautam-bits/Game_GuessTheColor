@@ -36,8 +36,14 @@ h1 {
 #colorDisplay {
 	font-size: 200%;
 }
-
+h2 {
+	text-align: center;
+}
 #message {
+	display: inline-block;
+	width: 20%;
+}
+#msg {
 	display: inline-block;
 	width: 20%;
 }
@@ -47,6 +53,14 @@ h1 {
 	height: 30px;
 	text-align: center;
 	color: black;
+}
+#stripe2 {
+	background: steelblue;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle ;
+	color: black;
+	height: 90px;
 }
 
 .selected {

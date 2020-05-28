@@ -14,7 +14,7 @@ var abc = 1;
 
 setInterval(function() { 
 	if(abc%4 == 0) h1.style.background = "green";
-	else if(abc%4 == 1 ) h1.style.background = "steelblue";
+	else if(abc%4 == 1 ) h1.style.background = "purple";
 	else if(abc%4 == 2 ) h1.style.background = "red";
 	else if(abc%4 == 3 ) h1.style.background = "orange";
 	abc++;
@@ -52,13 +52,15 @@ function setupSquares(){
 			var clickedColor = this.style.background;
 			//compare color to pickedColor
 			if(clickedColor === pickedColor){
-				messageDisplay.textContent = "Correct!";
+				messageDisplay.style.color = "red";
+				messageDisplay.textContent = "YOU WON!";
 				resetButton.textContent = "Play Again?"
 				changeColors(clickedColor);
 				h1.style.background = clickedColor;
 			} else {
+				messageDisplay.style.color = "white";
 				this.style.background = "#FFB6C1";
-				messageDisplay.textContent = "Try Again"
+				messageDisplay.textContent = "TRY AGAIN !"
 			}
 		});
 	}
@@ -117,11 +119,11 @@ function generateRandomColors(num){
 
 function randomColor(){
 	//pick a "red" from 0 - 255
-	var r = Math.floor(Math.random() * 64) + 50;
+	var r = Math.floor(Math.random() * 256) ;
 	//pick a "green" from  0 -255
-	var g = Math.floor(Math.random() * 64) + 50;
+	var g = Math.floor(Math.random() * 256) ;
 	//pick a "blue" from  0 -255
-	var b = Math.floor(Math.random() * 64) + 50;
+	var b = Math.floor(Math.random() * 256) ;
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
