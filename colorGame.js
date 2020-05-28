@@ -9,6 +9,17 @@ var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 
 
+
+var abc = 1;
+
+setInterval(function() { 
+	if(abc%4 == 0) h1.style.background = "green";
+	else if(abc%4 == 1 ) h1.style.background = "steelblue";
+	else if(abc%4 == 2 ) h1.style.background = "red";
+	else if(abc%4 == 3 ) h1.style.background = "orange";
+	abc++;
+	
+}, 300); 
 init();
 
 function init(){
@@ -16,6 +27,8 @@ function init(){
 	setupSquares();
 	reset();
 }
+
+
 
 function setupModeButtons(){
 	for(var i = 0; i < modeButtons.length; i++){
