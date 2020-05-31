@@ -3,7 +3,19 @@ body {
 	margin: 0;
 	font-family: "Montserrat", "Avenir";
 }
+#image {
+	width: 300px;
+	
 
+}
+#img {
+	background-color: #FFB6C1;
+	padding-bottom: 300px;
+}
+.pic {
+	background-image: url("img/download.png");
+	background-repeat: no-repeat;
+}
 .square {
 	width: 30%;
 	background: purple;
